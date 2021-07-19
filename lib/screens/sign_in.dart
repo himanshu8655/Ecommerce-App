@@ -48,7 +48,7 @@ class SignIn extends StatelessWidget {
 
                 ),
               ),
-              InkWell(
+              GestureDetector(
                 onTap: (){Navigator.push(context, MaterialPageRoute(builder: (context)=>OTP()));},
                 child: ElevatedButton(
                   child: Padding(

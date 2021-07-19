@@ -12,6 +12,7 @@ class MyBookings extends StatelessWidget {
       child: CustomPaint(
         size: Size(MediaQuery.of(context).size.width,800),
         painter: CurvedPainter(),
+
       ),
     );
   }
@@ -77,17 +78,17 @@ class Introduction1 extends StatelessWidget {
 
                   Align(alignment: Alignment.topRight,child:
                   Padding(
-                    padding: const EdgeInsets.fromLTRB(0,0,13,0),
-                    child: InkWell(onTap: (){Navigator.push(context, MaterialPageRoute(builder: (context)=>SignIn()));},
-                        child: Image.asset("assets/Skip.png")),
+                    padding: const EdgeInsets.fromLTRB(0,0,25,0),
+                    child: GestureDetector(onTap: (){Navigator.push(context, MaterialPageRoute(builder: (context)=>SignIn()));},
+                        child: Text("Skip", style: TextStyle(color: Colors.red,fontSize: 15,fontWeight: FontWeight.bold),)),
                   )),
                   Align(alignment: Alignment.bottomRight,child:
                   Padding(
                     padding: const EdgeInsets.fromLTRB(0,0,25,25),
-                    child: InkWell(onTap: (){Navigator.push(context, MaterialPageRoute(builder: (context)=>Introduction2()));},
+                    child: GestureDetector(onTap: (){Navigator.push(context, MaterialPageRoute(builder: (context)=>Introduction2()));},
                         child: Container(
-                          width: 50,
-                          height: 50,
+                          width: 45,
+                          height: 45,
 
                           decoration: BoxDecoration(
                               color: Colors.white,
@@ -100,7 +101,7 @@ class Introduction1 extends StatelessWidget {
                   Align(alignment: Alignment.bottomRight,child:
                   Padding(
                     padding: const EdgeInsets.fromLTRB(0,0,20,40),
-                    child: InkWell(onTap: (){},child:  Row(
+                    child: GestureDetector(onTap: (){},child:  Row(
                       mainAxisAlignment: MainAxisAlignment.center ,//Center Row contents horizontally,
                       children: [
                         Icon(Icons.circle,color: Colors.white,size: 15,),

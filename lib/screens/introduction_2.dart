@@ -28,7 +28,16 @@ class Introduction2 extends StatelessWidget {
                 Padding(
                   padding: const EdgeInsets.fromLTRB(0,0,20,20),
                   child: GestureDetector(onTap: (){Navigator.push(context, MaterialPageRoute(builder: (context)=>SignIn()));},
-                      child: Image.asset("assets/pageview_btn1.png",height: 50,width: 50,)),
+                      child: Container(
+                    width: 45,
+                    height: 45,
+
+                    decoration: BoxDecoration(
+                        color: Colors.white,
+                        shape: BoxShape.circle
+                    ),
+                    child: Center(child: Icon(Icons.arrow_forward_ios_rounded,color: Colors.red,size: 12,)),
+                  )),
                 )),
                 Align(alignment: Alignment.bottomRight,child:
                 Padding(
