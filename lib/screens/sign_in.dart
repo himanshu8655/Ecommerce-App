@@ -34,6 +34,7 @@ class SignIn extends StatelessWidget {
                       fontSize: 20
                     ),
                     textAlign: TextAlign.center,
+                    keyboardType: TextInputType.number,
                     decoration: InputDecoration(
                         hintText: 'Enter Mobile Number',
                         hintStyle: TextStyle(color: Colors.red),

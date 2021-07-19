@@ -28,8 +28,9 @@ class _SplashState extends State<Splash> {
           children: [
             Image.asset("assets/Logo.png"),
             Padding(
-              padding: const EdgeInsets.all(25.0),
-              child: Text("Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since"),
+              padding: const EdgeInsets.all(50.0),
+              child: Text("Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since"
+              ,textAlign: TextAlign.center,style: TextStyle(fontSize: 18),),
             )
           ],
         ),
