@@ -20,7 +20,7 @@ class CurvedPainter extends CustomPainter {
   @override
   void paint(Canvas canvas, Size size) {
     var paint = Paint();
-    paint.color = Colors.red;
+    paint.color = Colors.blue;
     paint.style = PaintingStyle.fill;
     paint.strokeWidth = 2.0;
     var path = Path();
