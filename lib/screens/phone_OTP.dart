@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:ambica/screens/home_page.dart';
 
 class OTP extends StatelessWidget {
 
@@ -135,7 +136,7 @@ class OTP extends StatelessWidget {
                Align(alignment: Alignment.topRight,child: Padding(padding: const EdgeInsets.fromLTRB(0, 10, 30, 40),
                  child: Text("Resend OTP",style:TextStyle(fontSize: 18)),)),
                InkWell(
-                 //onTap: (){Navigator.push(context, MaterialPageRoute(builder: (context)=>OTP()));},
+                 onTap: (){Navigator.push(context, MaterialPageRoute(builder: (context)=>HomePage()));},
                  child: ElevatedButton(
                      child: Padding(
                        padding: const EdgeInsets.all(20.0),

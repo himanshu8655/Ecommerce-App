@@ -83,10 +83,20 @@ class Introduction1 extends StatelessWidget {
                   )),
                   Align(alignment: Alignment.bottomRight,child:
                   Padding(
-                    padding: const EdgeInsets.fromLTRB(0,0,20,25),
+                    padding: const EdgeInsets.fromLTRB(0,0,25,25),
                     child: InkWell(onTap: (){Navigator.push(context, MaterialPageRoute(builder: (context)=>Introduction2()));},
-                        child: Image.asset("assets/pageview_btn1.png",height: 45,width: 45)),
+                        child: Container(
+                          width: 50,
+                          height: 50,
+
+                          decoration: BoxDecoration(
+                              color: Colors.white,
+                              shape: BoxShape.circle
+                          ),
+                          child: Center(child: Icon(Icons.arrow_forward_ios_rounded,color: Colors.red,size: 12,)),
+                        )),
                   )),
+
                   Align(alignment: Alignment.bottomRight,child:
                   Padding(
                     padding: const EdgeInsets.fromLTRB(0,0,20,40),
