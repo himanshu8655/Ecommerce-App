@@ -19,7 +19,7 @@ class Introduction2 extends StatelessWidget {
       child: Scaffold(
         body: Container(
           child:  Padding(
-            padding: const EdgeInsets.fromLTRB(1,150,1,0),
+            padding: const EdgeInsets.fromLTRB(1,100,1,0),
             child: Stack(
               children: [
                 Align(alignment: Alignment.topCenter,child: Image.asset("assets/pageview_img2.png")),

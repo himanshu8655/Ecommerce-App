@@ -20,11 +20,10 @@ class CurvedPainter extends CustomPainter {
   @override
   void paint(Canvas canvas, Size size) {
     var paint = Paint();
-    paint.color = Colors.blue;
+    paint.color = Colors.red[400];
     paint.style = PaintingStyle.fill;
     paint.strokeWidth = 2.0;
     var path = Path();
-
     path.moveTo(0, size.height * 0.45);
     path.quadraticBezierTo(size.width * 0.05
         , size.height * 0.6,
