@@ -4,18 +4,53 @@ import 'package:flutter/material.dart';
 import 'dart:ui' as ui;
 import 'package:flutter/painting.dart';
 import 'package:ambica/screens/sign_in.dart';
+import 'package:flutter/services.dart';
 
-class MyBookings extends StatelessWidget {
+class Paint_Wave extends StatelessWidget {
+  final String text_content;
+  final String text_heading;
+ Paint_Wave({
+this.text_heading,this.text_content
+});
   @override
   Widget build(BuildContext context) {
-    return Container(
-      child: CustomPaint(
-        size: Size(MediaQuery.of(context).size.width,800),
-        painter: CurvedPainter(),
+    Future<bool> _onBackPressed() {
+      return showDialog(
+        context: context,
+        builder: (context) {
+          return AlertDialog(
+            title: Text('Confirm'),
+            content: Text('Do you want to exit the App'),
+            actions: <Widget>[
+              TextButton(
+                child: Text('No'),
+                onPressed: () {
+                  Navigator.of(context).pop(false); //Will not exit the App
+                },
+              ),
+              TextButton(
+                child: Text('Yes'),
+                onPressed: () {
+                  SystemChannels.platform.invokeMethod('SystemNavigator.pop'); //Will exit the App
+                },
+              )
+            ],
+          );
+        },
+      ) ?? false;
+    }
+    return WillPopScope(
+      onWillPop: _onBackPressed,
+      child: Container(
+        child: CustomPaint(
+          size: Size(MediaQuery.of(context).size.width,800),
+          painter: CurvedPainter(),
+        ),
       ),
     );
   }
 }
+
 class CurvedPainter extends CustomPainter {
   @override
   void paint(Canvas canvas, Size size) {
@@ -58,8 +93,10 @@ class Introduction1 extends StatelessWidget {
         // Note: Sensitivity is integer used when you don't want to mess up vertical drag
         int sensitivity = 8;
         if (details.delta.dx > sensitivity) {
+
           // Right Swipe|
         } else if(details.delta.dx < -sensitivity){
+          Navigator.push(context, MaterialPageRoute(builder: (context)=>Introduction2()));
           //Left Swipe
         }
       },
@@ -73,7 +110,7 @@ class Introduction1 extends StatelessWidget {
                 children: [
                   Align(alignment: Alignment.topCenter,child: Image.asset("assets/pageview_img.png")),
 
-                  Align(alignment: Alignment.bottomCenter,child: MyBookings()),
+                  Align(alignment: Alignment.bottomCenter,child: Paint_Wave(text_heading: "head",text_content: "body")),
 
                   Align(alignment: Alignment.topRight,child:
                   Padding(

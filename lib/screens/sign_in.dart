@@ -50,7 +50,8 @@ class SignIn extends StatelessWidget {
               ),
               GestureDetector(
                 onTap: (){Navigator.push(context, MaterialPageRoute(builder: (context)=>OTP()));},
-                child: ElevatedButton(
+                child:
+                ElevatedButton(
                   child: Padding(
                     padding: const EdgeInsets.all(18.0),
                     child: Text("Send OTP",style: TextStyle(color: Colors.white,fontSize: 18)),

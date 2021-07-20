@@ -1,6 +1,7 @@
 import 'package:ambica/screens/introduction_1.dart';
 import 'package:flutter/material.dart';
 import 'package:ambica/screens/sign_in.dart';
+import '';
 class Introduction2 extends StatelessWidget {
 
   @override
@@ -23,7 +24,7 @@ class Introduction2 extends StatelessWidget {
             child: Stack(
               children: [
                 Align(alignment: Alignment.topCenter,child: Image.asset("assets/pageview_img2.png")),
-                Align(alignment: Alignment.bottomCenter,child: Paint_wave(text_content: "content",text_heading: "heading",container_height: 800)),
+                Align(alignment: Alignment.bottomCenter,child: Paint_Wave(text_content: "content",text_heading: "heading")),
                 Align(alignment: Alignment.bottomRight,child:
                 Padding(
                   padding: const EdgeInsets.fromLTRB(0,0,20,20),
@@ -60,3 +61,5 @@ class Introduction2 extends StatelessWidget {
     );
   }
 }
+
+
