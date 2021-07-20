@@ -14,11 +14,13 @@ class _HomePageState extends State<HomePage> {
       return  SingleChildScrollView(
         child: Stack(
           children: [
+
+
             Align(alignment: Alignment.topCenter,child: Image.asset("assets/wallpaper.png")),
             Align(
               alignment: Alignment.topCenter,
               child: Padding(
-                padding: const EdgeInsets.fromLTRB(0, 100, 0, 0),
+                padding: const EdgeInsets.fromLTRB(0, 110, 0, 0),
                 child: Container(
                   width: MediaQuery.of(context).size.width,
                   height: MediaQuery.of(context).size.height,
@@ -33,7 +35,24 @@ class _HomePageState extends State<HomePage> {
                 ),
               ),
             ),
-
+            ClipRRect(
+              borderRadius: BorderRadius.circular(100),
+              child: Padding(
+                padding: const EdgeInsets.fromLTRB(12, 35, 0, 0),
+                child: Image.asset("assets/person.png", height: 60.0, width: 60.0,
+                ),
+              ),
+            ),
+            Padding(
+              padding: const EdgeInsets.fromLTRB(78,45,10,10),
+              child: Text("Name Surname",
+                style: TextStyle(color: Colors.white,fontWeight: FontWeight.bold,fontSize: 20),),
+            ),
+            Padding(
+              padding: const EdgeInsets.fromLTRB(78,70,10,10),
+              child: Text("Committee Member",
+                style: TextStyle(color: Colors.white,fontSize: 14),),
+            ),
           ],
         ),
       );
