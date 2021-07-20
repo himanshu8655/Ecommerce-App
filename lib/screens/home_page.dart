@@ -8,15 +8,47 @@ class HomePage extends StatefulWidget {
 
 class _HomePageState extends State<HomePage> {
   int _currentIndex=0;
-  final tabs=[
-    Center(
-        child: Text('Home')
-    ),
-    Center(child: Text('Announcements')),
-    Center(child: Text('Notification')),
-    Center(child: Text('Meessage')),
+  func(int currentIndex, BuildContext context){
+    print(currentIndex);
+    if(_currentIndex==0){
+      return  SingleChildScrollView(
+        child: Stack(
+          children: [
+            Align(alignment: Alignment.topCenter,child: Image.asset("assets/wallpaper.png")),
+            Align(
+              alignment: Alignment.topCenter,
+              child: Padding(
+                padding: const EdgeInsets.fromLTRB(0, 100, 0, 0),
+                child: Container(
+                  width: MediaQuery.of(context).size.width,
+                  height: MediaQuery.of(context).size.height,
+                  decoration: BoxDecoration(
+                      color: Colors.white,
+                      border: Border.all(
+                        color: Colors.white,
+                      ),
+                      borderRadius: BorderRadius.circular(20)
+                  ),
 
-  ];
+                ),
+              ),
+            ),
+
+          ],
+        ),
+      );
+    }
+    else if(_currentIndex==1){
+      Center(child: Text('a'));
+    }
+    else if(_currentIndex==2){
+      Center(child: Text('a'));
+    }
+    else if(_currentIndex==3){
+      Center(child: Text('a'));
+    }
+  }
+
 
   @override
 
@@ -57,32 +89,8 @@ class _HomePageState extends State<HomePage> {
             });
           },
         ),
-        body: SingleChildScrollView(
-          child: Stack(
-            children: [
-              Align(alignment: Alignment.topCenter,child: Image.asset("assets/wallpaper.png")),
-              Align(
-                alignment: Alignment.topCenter,
-                child: Padding(
-                  padding: const EdgeInsets.fromLTRB(0, 100, 0, 0),
-                  child: Container(
-                    width: MediaQuery.of(context).size.width,
-                  height: 1000,
-                  decoration: BoxDecoration(
-                    color: Colors.white,
-                    border: Border.all(
-                      color: Colors.red[500],
-                  ),
-                      borderRadius: BorderRadius.circular(20)
-                  ),
+        body: func(_currentIndex,context),
 
-                  ),
-                ),
-              ),
-
-            ],
-          ),
-        ),
       ),
     );
   }
