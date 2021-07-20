@@ -11,7 +11,7 @@ class OTP extends StatelessWidget {
            child: Column(
              children: [
                SizedBox(
-                 height: 40,
+                 height: 30,
                ),
 
                Align(alignment: Alignment.bottomCenter,child: Text("Enter OTP",textAlign:TextAlign.center,style:TextStyle(fontWeight: FontWeight.bold,fontSize: 30))),
