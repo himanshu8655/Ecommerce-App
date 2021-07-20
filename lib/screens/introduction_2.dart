@@ -23,7 +23,7 @@ class Introduction2 extends StatelessWidget {
             child: Stack(
               children: [
                 Align(alignment: Alignment.topCenter,child: Image.asset("assets/pageview_img2.png")),
-                Align(alignment: Alignment.bottomCenter,child: MyBookings()),
+                Align(alignment: Alignment.bottomCenter,child: Paint_wave(text_content: "content",text_heading: "heading",container_height: 800)),
                 Align(alignment: Alignment.bottomRight,child:
                 Padding(
                   padding: const EdgeInsets.fromLTRB(0,0,20,20),
